@@ -1,4 +1,4 @@
-# postcss-custom-props-themes
+# postcss-custom-props-themes [![Build Status](https://travis-ci.org/johnwatkins0/postcss-custom-props-themes.svg?branch=master)](https://travis-ci.org/johnwatkins0/postcss-custom-props-themes)
 
 A [PostCSS](https://github.com/postcss/postcss) plugin for generating theming classes based on CSS custom properties.
 
