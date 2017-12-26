@@ -1,7 +1,8 @@
 {
   "name": "postcss-custom-props-themes",
-  "version": "1.0.0",
-  "description": "PostCSS plugin for generating theming classes based on CSS custom properties.",
+  "version": "0.1.0",
+  "description":
+    "A PostCSS plugin for generating theming classes based on CSS custom properties.",
   "main": "dist/index.js",
   "author": "John Watkins",
   "license": "MIT",
@@ -10,6 +11,10 @@
     "prepare": "BABEL_ENV=publish babel src --out-dir dist",
     "pretest": "eslint *.js",
     "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/johnwatkins0/postcss-custom-props-themes"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -21,9 +26,7 @@
   },
   "eslintConfig": {
     "parser": "babel-eslint",
-    "extends": [
-      "eslint-config-postcss"
-    ],
+    "extends": ["eslint-config-postcss"],
     "globals": {
       "test": true
     },
