@@ -1,8 +1,12 @@
 # postcss-custom-props-themes
 
-A PostCSS plugin for generating theming classes based on CSS custom properties.
+A [PostCSS](https://github.com/postcss/postcss) plugin for generating theming classes based on CSS custom properties.
 
-The plugin generates user-defined theme classes to set a background color and the colors of enclosed elements, including text, links, and headings. It uses CSS custom properties. The plugin settings require a default theme, which sets fallback styles for browsers that don't support custom properties.
+## About
+
+This plugin generates user-defined CSS classes to set an element's background color and the colors of enclosed elements, including text, links, and headings.
+
+This plugin uses CSS custom properties. While this approach saves many lines of CSS, it is not recommended for any project needing to support older browsers.
 
 ## Install
 
@@ -127,4 +131,3 @@ The theme can be used in your markup like so:
   <a href="#">A link</a><!-- Blue (purple on hover). -->
 </section>
 ```
-
