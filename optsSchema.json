@@ -1,0 +1,54 @@
+{
+  "type": "object",
+  "title": "postcss-custom-props-themes schema",
+  "description": "Options passed to the postcss-custom-props-themes plugin.",
+  "required": ["defaultTheme", "themes"],
+  "properties": {
+    "defaultTheme": {
+      "description": "The theme that will be applied globally.",
+      "type": "string"
+    },
+    "themes": {
+      "type": "array",
+      "maxItems": 50,
+      "items": {
+        "title": "Theme",
+        "description": "A theme to generate CSS for.",
+        "type": "object",
+        "required": ["name"],
+        "properties": {
+          "name": {
+            "description": "The name of the theme.",
+            "type": "string"
+          },
+          "inherits": {
+            "descriptions":
+              "A theme for this theme's unset properties to inherit from.",
+            "type": "string"
+          },
+          "background-color": {
+            "type": "string"
+          },
+          "color": {
+            "type": "string"
+          },
+          "link-color": {
+            "type": "string"
+          },
+          "link-hover-color": {
+            "type": "string"
+          },
+          "heading-color": {
+            "type": "string"
+          },
+          "heading-link-color": {
+            "type": "string"
+          },
+          "heading-link-hover-color": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
