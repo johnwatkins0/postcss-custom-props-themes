@@ -28,28 +28,24 @@ ${makeThemes({ opts, themes: opts.themes })}
         }
     });
 
-const customPropsThemes = (opts = {}) => {
-    return (root, result) =>
-        new Promise((resolve, reject) => {
-            if (root.source.input.css.indexOf('@custom-props-themes') === -1) {
-                result.warn('@custom-props-themes at rule not found');
-                resolve();
-                return;
-            }
+const customPropsThemes = (opts = {}) => (root, result) =>
+    new Promise((resolve, reject) => {
+        if (root.source.input.css.indexOf('@custom-props-themes') === -1) {
+            result.warn('@custom-props-themes at rule not found');
+            resolve();
+            return;
+        }
 
-            root.walkAtRules('custom-props-themes', async rule => {
-                try {
-                    const css = await buildCSS(
-                        opts.length ? opts : defaultOpts,
-                    );
-                    rule.before(css);
-                    rule.remove();
-                    resolve();
-                } catch (err) {
-                    reject(err);
-                }
-            });
+        root.walkAtRules('custom-props-themes', async rule => {
+            try {
+                const css = await buildCSS(opts.length ? opts : defaultOpts);
+                rule.before(css);
+                rule.remove();
+                resolve();
+            } catch (err) {
+                reject(err);
+            }
         });
-};
+    });
 
 module.exports = postcss.plugin('custom-props-themes', customPropsThemes);
