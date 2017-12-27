@@ -1,8 +1,7 @@
 {
   "name": "postcss-custom-props-themes",
-  "version": "0.1.0",
-  "description":
-    "A PostCSS plugin for generating theming classes based on CSS custom properties.",
+  "version": "0.1.1",
+  "description": "A PostCSS plugin for generating theming classes based on CSS custom properties.",
   "main": "dist/index.js",
   "author": "John Watkins",
   "license": "MIT",
@@ -26,7 +25,9 @@
   },
   "eslintConfig": {
     "parser": "babel-eslint",
-    "extends": ["eslint-config-postcss"],
+    "extends": [
+      "eslint-config-postcss"
+    ],
     "globals": {
       "test": true
     },
