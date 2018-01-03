@@ -1,6 +1,6 @@
 {
   "name": "postcss-custom-props-themes",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A PostCSS plugin for generating theming classes based on CSS custom properties.",
   "main": "dist/index.js",
   "author": "John Watkins",
