@@ -29,6 +29,9 @@
           "background-color": {
             "type": "string"
           },
+          "background-hover-color": {
+            "type": "string"
+          },
           "color": {
             "type": "string"
           },
@@ -45,6 +48,9 @@
             "type": "string"
           },
           "heading-link-hover-color": {
+            "type": "string"
+          },
+          "border-color": {
             "type": "string"
           }
         }

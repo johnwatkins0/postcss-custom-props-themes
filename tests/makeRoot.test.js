@@ -6,12 +6,14 @@ test('The root element is correctly generated.', () => {
         makeRoot(defaultOpts.themes.filter(theme => theme.name === 'light')[0]),
     ).toBe(`:root {
   --background-color: white;
+  --background-hover-color: white;
   --color: black;
   --link-color: blue;
   --link-hover-color: purple;
   --heading-color: black;
   --heading-link-color: blue;
   --heading-link-hover-color: purple;
+  --border-color: white;
 }
 `);
 });

@@ -62,11 +62,14 @@ Each object in the themes array can take several settings:
   name: 'string', // Required. The name of the theme -- e.g., 'light', 'dark', 'primary'.
   inherits: 'string', // Another theme in this array to inherit from. Unset values in this theme object will be drawn from the theme it inherits from. By default, themes inherit from the default theme.
   color: 'string' // The rest of the settings are CSS colors.
+  'background-color': 'string',
+  'background-hover-color': 'string',
   'link-color': 'string',
   'link-hover-color': 'string',
   'heading-color': 'string',
   'heading-link-color': 'string',
-  'heading-link-hover-color': 'string'
+  'heading-link-hover-color': 'string',
+  'border-color': 'string'
 }
 ```
 
@@ -81,12 +84,14 @@ If an empty object is passed to the plugin, the following rudimentary defaults a
         {
             name: 'light',
             'background-color': 'white',
+            'background-hover-color': 'white',
             color: 'black',
             'link-color': 'blue',
             'link-hover-color': 'purple',
             'heading-color': 'black',
             'heading-link-color': 'blue',
             'heading-link-hover-color': 'purple',
+            'border-color': 'transparent'
         },
         {
             name: 'dark',
@@ -112,12 +117,14 @@ Say you set the following theme:
 {
     name: 'example-theme',
     'background-color': 'white',
+    'background-hover-color': 'white',
     color: 'black',
     'link-color': 'blue',
     'link-hover-color': 'purple',
     'heading-color': 'red',
     'heading-link-color': 'orange',
     'heading-link-hover-color': 'yellow',
+    'border-color': 'blue'
 }
 ```
 
