@@ -30,6 +30,17 @@ ${makeThemes({ opts, themes: opts.themes })}
 
 const customPropsThemes = (opts = {}) => root =>
     new Promise((resolve, reject) => {
+        console.log('hihihi');
+        const atRuleCount =
+            root.source.input.css.split('@custom-props-themes').length - 1;
+
+        if (atRuleCount === 0) {
+            result.warn('@custom-props-themes at rule not found');
+            reject('@custom-props-themes at rule not found');
+            return;
+        }
+
+        let steps = 0;
         root.walkAtRules('custom-props-themes', async rule => {
             try {
                 const css = await buildCSS(
@@ -37,11 +48,19 @@ const customPropsThemes = (opts = {}) => root =>
                 );
                 rule.before(css);
                 rule.remove();
-                resolve();
+                steps += 1;
             } catch (err) {
-                reject(err);
+                steps += 1;
+                result.warn(err);
             }
         });
+
+        const completionInterval = setInterval(() => {
+            if (steps === atRuleCount) {
+                clearInterval(completionInterval);
+                resolve();
+            }
+        }, 1000);
     });
 
 module.exports = postcss.plugin('custom-props-themes', customPropsThemes);
