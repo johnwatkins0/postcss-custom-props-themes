@@ -30,7 +30,6 @@ ${makeThemes({ opts, themes: opts.themes })}
 
 const customPropsThemes = (opts = {}) => root =>
     new Promise((resolve, reject) => {
-        console.log('hihihi');
         const atRuleCount =
             root.source.input.css.split('@custom-props-themes').length - 1;
 
