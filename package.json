@@ -1,42 +1,41 @@
 {
-  "name": "postcss-custom-props-themes",
-  "version": "0.1.4",
-  "description": "A PostCSS plugin for generating theming classes based on CSS custom properties.",
-  "main": "dist/index.js",
-  "author": "John Watkins",
-  "license": "MIT",
-  "scripts": {
-    "develop": "babel --watch src --out-dir dist",
-    "prepare": "BABEL_ENV=publish babel src --out-dir dist",
-    "pretest": "eslint *.js",
-    "test": "jest"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/johnwatkins0/postcss-custom-props-themes"
-  },
-  "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-eslint": "^8.1.2",
-    "babel-preset-env": "^1.6.1",
-    "eslint": "^4.14.0",
-    "eslint-config-postcss": "^2.0.2",
-    "jest": "^22.0.4"
-  },
-  "eslintConfig": {
-    "parser": "babel-eslint",
-    "extends": [
-      "eslint-config-postcss"
-    ],
-    "globals": {
-      "test": true
+    "name": "postcss-custom-props-themes",
+    "version": "0.1.4",
+    "description":
+        "A PostCSS plugin for generating theming classes based on CSS custom properties.",
+    "main": "dist/index.js",
+    "author": "John Watkins",
+    "license": "MIT",
+    "scripts": {
+        "develop": "babel --watch src --out-dir dist",
+        "prepare": "BABEL_ENV=publish babel src --out-dir dist",
+        "pretest": "eslint *.js",
+        "test": "jest"
     },
-    "rules": {
-      "comma-dangle": 0
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/johnwatkins0/postcss-custom-props-themes"
+    },
+    "devDependencies": {
+        "babel-cli": "^6.26.0",
+        "babel-eslint": "^8.1.2",
+        "babel-preset-env": "^1.6.1",
+        "eslint": "^4.14.0",
+        "eslint-config-postcss": "^2.0.2",
+        "jest": "^22.0.4"
+    },
+    "eslintConfig": {
+        "parser": "babel-eslint",
+        "extends": ["eslint-config-postcss"],
+        "globals": {
+            "test": true
+        },
+        "rules": {
+            "comma-dangle": 0
+        }
+    },
+    "dependencies": {
+        "ajv": "^5.5.2",
+        "postcss": "^6.0.14"
     }
-  },
-  "dependencies": {
-    "ajv": "^5.5.2",
-    "postcss": "^6.0.14"
-  }
 }
