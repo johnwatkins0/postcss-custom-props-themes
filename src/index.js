@@ -30,13 +30,11 @@ ${makeThemes({ opts, themes: opts.themes })}
 
 const customPropsThemes = (opts = {}) => root =>
     new Promise((resolve, reject) => {
-        console.log('hihihi');
         const atRuleCount =
             root.source.input.css.split('@custom-props-themes').length - 1;
 
         if (atRuleCount === 0) {
-            result.warn('@custom-props-themes at rule not found');
-            reject('@custom-props-themes at rule not found');
+            resolve();
             return;
         }
 
