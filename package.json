@@ -1,42 +1,42 @@
 {
-  "name": "postcss-custom-props-themes",
-  "version": "0.1.5",
-  "description": "A PostCSS plugin for generating theming classes based on CSS custom properties.",
-  "main": "dist/index.js",
-  "author": "John Watkins",
-  "license": "MIT",
-  "scripts": {
+    "name": "postcss-custom-props-themes",
+    "version": "0.1.6",
+    "description": "A PostCSS plugin for generating theming classes based on CSS custom properties.",
+    "main": "dist/index.js",
+    "author": "John Watkins",
+    "license": "MIT",
+    "scripts": {
     "develop": "babel --watch src --out-dir dist",
     "prepare": "BABEL_ENV=publish babel src --out-dir dist",
     "pretest": "eslint *.js",
     "test": "jest"
-  },
-  "repository": {
+    },
+    "repository": {
     "type": "git",
     "url": "https://github.com/johnwatkins0/postcss-custom-props-themes"
-  },
-  "devDependencies": {
+    },
+    "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-eslint": "^8.1.2",
     "babel-preset-env": "^1.6.1",
     "eslint": "^4.14.0",
     "eslint-config-postcss": "^2.0.2",
     "jest": "^22.0.4"
-  },
-  "eslintConfig": {
+    },
+    "eslintConfig": {
     "parser": "babel-eslint",
     "extends": [
-      "eslint-config-postcss"
+    "eslint-config-postcss"
     ],
     "globals": {
-      "test": true
+    "test": true
     },
     "rules": {
-      "comma-dangle": 0
+    "comma-dangle": 0
     }
-  },
-  "dependencies": {
+    },
+    "dependencies": {
     "ajv": "^5.5.2",
     "postcss": "^6.0.14"
-  }
-}
+    }
+    }
